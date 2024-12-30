@@ -7,13 +7,12 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: nginx-deployment
-  minReplicas: 2  # حداقل تعداد پادها
-  maxReplicas: 10 # حداکثر تعداد پادها
+  minReplicas: 2 
+  maxReplicas: 10 
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 50 # هدف مصرف CPU به درصد
-
+        averageUtilization: 50
